@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mhmmtucan/sna-slack.svg?branch=master)](https://travis-ci.org/mhmmtucan/sna-slack) [![GitHub license](https://img.shields.io/github/license/mhmmtucan/sna-slack.svg)](https://github.com/mhmmtucan/sna-slack/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/torshid/SNA4Slack.svg)](https://github.com/torshid/SNA4Slack/blob/master/LICENSE)
 
 The socail network analysis for Slack workspaces.
 
@@ -31,7 +31,8 @@ In order to test application [demo](https://sna4slack.pythonanywhere.com) page c
 
 ### Contributors
 
-* [malkoch](https://github.com/malkoch)
 * [torshid](https://github.com/torshid)
+* [mhmmtucan](https://github.com/mhmmtucan)
+* [malkoch](https://github.com/malkoch)
 * [yazidabdulsalam](https://github.com/yazidabdulsalam)
 * [alperbry](https://github.com/alperbry)

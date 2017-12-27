@@ -22,8 +22,12 @@
                                       "join",
                                       "contact"]},
             "nodeStyle": {
+                "all": {
+                    borderWidth: 1,
+                    borderColor: "white"
+                },
                 "team": {
-                    color: "#00ff0e",
+                    color: "#00ff0e"
                 },
                 "channel":{
                     color: "#00ff0e",
@@ -31,17 +35,40 @@
                 },
                 "user": {
                     color: "#ff7921",
-                    borderColor: "#fff",
+                    borderColor: "#ffffff",
                     radius: function(d) {
-                        return d.getProperties().radius * 30 + 10
+                        return d.getProperties().radius
                     },
                     color: function (d) {
-                        return "rgba(255, 0, 0, " + 
-                        (d.getProperties().radius) + " )"
+                        //radius is between 10 and 40
+                        //h value will be between 151 and 1
+                        //return "hsl(" + (201 - d.getProperties().radius * 5) + ", 75%, 40%)"
+                        return "hsl(" + (201 - d.getProperties().radius * 5) + ", 100%, 50%)"
+                        //return "rgb(" + (d.getProperties().radius * 5) + ", 0, 0)"
                     }
                 }
             },
             "edgeStyle": {
+                "all": {
+                    color: "#ffffff",
+                    opacity: 1,
+                    selected: {
+                        color: "#c6c6c6"
+                    },
+                    highlighted: {
+                        color: "#c6c6c6"
+                    },
+                    width: function(d) {
+                        return d.getProperties().width
+                    },
+                    color: function(d) {
+                        //width is between 2 and 4
+                        //h value will be between 101 and 1
+                        //return "hsl(" + (201 - d.getProperties().width * 50) + ", 75%, 40%)"
+                        return "hsl(" + (201 - d.getProperties().width * 50) + ", 100%, 50%)"
+                        //return "rgb(" + (d.getProperties().width * 50) + ", 0, 0)"
+                    }
+                },
                 "in": {
                     color: "#00fffa",
                     width: 5
@@ -57,12 +84,21 @@
                     },
                     width: function(d) {
                         return d.getProperties().width * 2 
+                    },
+                    color: function(d) {
+                        return "rgba(" + (d.getProperties().width * 100) + "," + (d.getProperties().width * 100) + "," + (d.getProperties().width * 100) + "," + (255) + ")"
                     }
                 }
             }
         };
     
         alchemy.begin(config);
+
+        /*setTimeout(function() {
+            document.getElementById("alchemy").style.background = "lightblue";
+            document.getElementsByTagName("svg")[0].style.background = "lightblue";
+        }, 500)*/
+
       </script>
     </body>
     </html>
